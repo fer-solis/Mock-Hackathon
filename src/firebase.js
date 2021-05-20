@@ -17,8 +17,7 @@
 
 
 export const db = fb.firestore();
-// console.log(womanColection);
-console.log(db);
+// console.log(db);
 
 
 

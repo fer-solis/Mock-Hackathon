@@ -37,7 +37,6 @@ function App() {
   return (
     <div className="App">
       <h1 key={doc.data('Nombre')}></h1>
-      {/* <p id='name'>{doc.data(Nombre)}</p> */}
     </div>
   );
 }
