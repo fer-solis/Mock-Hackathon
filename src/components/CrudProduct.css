@@ -1,0 +1,39 @@
+#styleId {
+  color: #fafafa83;
+  font-weight: 300;
+  text-align: left;
+  font-size: small;
+}
+.styleIdChar {
+  color: #fafafa;
+  font-weight: 300;
+  text-align: left;
+  margin: 16px 0px -5px 0px;
+}
+#styleProductName {
+  color: #fafafa;
+  font-weight: 600;
+  text-align: left;
+  font-size: 2rem;
+  margin: -9px 0px -9px 0px;
+}
+#stylePriceName {
+  color: #fafafa;
+  font-weight: 500;
+  text-align: left;
+  font-size: 1.5rem;
+  margin: 13px 0px -9px 0px;
+}
+.table {
+  margin: auto;
+  background-color: #636363;
+  padding: 30px 40px 0px 25px;
+}
+#product-photos {
+  width: 20rem;
+}
+#card {
+  background-color: #cddee063;
+  padding: 0rem;
+  margin: 0rem -1rem 0rem 0rem;
+}

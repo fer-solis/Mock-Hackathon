@@ -1,4 +1,5 @@
 import React from 'react'
+import './Header.css'
 import totalLookLogo from '../assets/totalLookLogo.png';
 import avatarUser from '../assets/avatarUser.png'
 import shoppingCart from '../assets/shoppingCart.png'
@@ -19,7 +20,7 @@ const Header = () => {
             <img id="logoHeader" src={totalLookLogo} onClick={goHome}></img>
             <div id="containerHeader">
                 <img id="avatarUser" src={avatarUser}></img>
-                <img id="shoppingCart" src={shoppingCart}></img>
+                <i id="shoppingCart" className="material-icons">add_shopping_cart</i>
             </div>
         </div>
         

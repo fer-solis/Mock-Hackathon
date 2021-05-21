@@ -1,28 +1,22 @@
-import './App.css';
-import  {db} from './firebase';
+import "./App.css";
+import { db } from "./firebase";
 
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from 'react-router-dom';
-
-import AdminProducts from './AdminProducts';
-import Carrusel from './components/Carrusel'
-import Header from './components/Header';
-
+import AdminProducts from "./AdminProducts";
+import Carrusel from "./components/Carrusel";
+import Header from "./components/Header";
+import Search from "./components/Search";
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Switch>
-          <Route path = '/' exact>
-            <Header/>
-            <Carrusel/>
-            
-
+          <Route path="/" exact>
+            <Header />
+            <Search />
+            <Carrusel />
           </Route>
           {/* <Route path = '/home'>
             <Login />
@@ -36,10 +30,11 @@ function App() {
           <Route path = '/products'>
             <h1>Hola soy el administrador</h1>
           </Route> */}
-          <Route path = '/admin'>
-            <Header/>
-            <h2>Agregar productos</h2>
-            <AdminProducts/>
+          <Route path="/admin">
+            <Header />
+            <h1>Hola soy el administrador</h1>
+            <p>aquí agrego productos</p>
+            <AdminProducts />
           </Route>
         </Switch>
       </div>
