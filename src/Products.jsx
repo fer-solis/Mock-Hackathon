@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { db } from './firebase';
 import ProductCard from './components/ProductCard'
+import Cart from './Cart';
 
-export default function Products(props) {
+export default function Products( props ) {
   const [productList, setproductList] = useState ([])
+  const [cart, setCart] = useState([]);
+
 
 
   useEffect(() => {
@@ -24,6 +27,9 @@ export default function Products(props) {
 
   return (
     <div>
+      <div className= 'cabecera'>
+        <Cart cart={cart} setCart={setCart}/>
+      </div>
       {productList &&
           productList.map((product) => (
             <ProductCard
@@ -31,8 +37,13 @@ export default function Products(props) {
               product={product}
               productList={productList}
               setproductList={setproductList}
+              cart={cart}
+              setCart={setCart}
             />
           ))}
+
+          {/* agregar un modal para avisar que se ha agregado un producto al carrito */}
+          {/* esta vista no contendra el resumen del carrito */}
     </div>
   )
 }

@@ -10,6 +10,7 @@ import AdminProducts from './AdminProducts';
 import Carrusel from './components/Carrusel'
 import Header from './components/Header';
 import Products from './Products';
+import Cart from './Cart'
 
 
 function App() {
@@ -20,8 +21,6 @@ function App() {
           <Route path = '/' exact>
             <Header/>
             <Carrusel/>
-
-
           </Route>
           {/* <Route path = '/home'>
             <Login />
@@ -31,6 +30,7 @@ function App() {
           </Route> */}
           <Route path = '/categories'>
             <h1>aqui va el listado de categorias</h1>
+            <Cart/>
           </Route>
           <Route path = '/products'>
           <p>aquí veo todos los productos si soy cliente</p>
