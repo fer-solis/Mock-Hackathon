@@ -9,6 +9,8 @@ import {
 } from 'react-router-dom';
 
 import AdminProducts from './AdminProducts';
+import Carrusel from './components/Carrusel'
+import Header from './components/Header';
 
 
 function App() {
@@ -17,7 +19,10 @@ function App() {
       <div className="App">
         <Switch>
           <Route path = '/' exact>
-            <h1>Hola soy el home</h1>
+            <Header/>
+            <Carrusel/>
+            
+
           </Route>
           {/* <Route path = '/home'>
             <Login />
@@ -32,6 +37,7 @@ function App() {
             <h1>Hola soy el administrador</h1>
           </Route> */}
           <Route path = '/admin'>
+            <Header/>
             <h1>Hola soy el administrador</h1>
             <p>aquí agrego productos</p>
             <AdminProducts/>
