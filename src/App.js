@@ -1,5 +1,6 @@
 import './App.css';
 import  {db} from './firebase';
+import useState from 'react';
 
 
 import {
@@ -11,6 +12,9 @@ import {
 import AdminProducts from './AdminProducts';
 import Carrusel from './components/Carrusel'
 import Header from './components/Header';
+
+  // // // Cart State 
+  // const [cart, setCart] = useState([]);
 
 
 function App() {

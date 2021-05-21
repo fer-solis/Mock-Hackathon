@@ -3,6 +3,7 @@ import { db } from './firebase';
 import { useEffect, useState } from 'react';
 
 import CrudProduct from './components/CrudProduct'
+import Cart from './components/Cart'
 
 export default function AdminProducts(props) {
   const [productList, setProductList] = useState([]);
@@ -13,6 +14,9 @@ export default function AdminProducts(props) {
   const [category, setCategory] = useState("");
   const [type, setType] = useState("");
   const [image, setImage] = useState("");
+  // Cart State 
+   const [cart, setCart] = useState([]);
+  
 
   useEffect(() => {
     getProducts();
@@ -103,8 +107,16 @@ export default function AdminProducts(props) {
               product={product}
               productList={productList}
               setProductList={setProductList}
+              cart={cart}
+              setCart={setCart}
             />
           ))}
+        <div className='cart-container'>
+        {/* pasar al estado al componente Cart*/}
+          <Cart
+          cart={cart}
+          setCart={setCart}/>
+        </div>
       </Fragment>
     </div>
   );
