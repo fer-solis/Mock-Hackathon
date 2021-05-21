@@ -1,8 +1,9 @@
-import React, { Fragment } from 'react';
-import { db } from './firebase';
-import { useEffect, useState } from 'react';
+import React, { Fragment } from "react";
+import { db } from "./firebase";
+import { useEffect, useState } from "react";
 
-import CrudProduct from './components/CrudProduct'
+import CrudProduct from "./components/CrudProduct";
+import "./AdminProducts.css";
 
 export default function AdminProducts(props) {
   const [productList, setProductList] = useState([]);
@@ -29,6 +30,8 @@ export default function AdminProducts(props) {
       setProductList(docs);
     });
   };
+
+
 
   const addProduct = async () => {
     const obj = { name, description, color, price, category, type, image };
@@ -109,4 +112,3 @@ export default function AdminProducts(props) {
     </div>
   );
 }
-

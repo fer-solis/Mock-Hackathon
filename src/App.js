@@ -1,45 +1,49 @@
-import './App.css';
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from 'react-router-dom';
+import "./App.css";
+import { db } from "./firebase";
 
-import AdminProducts from './AdminProducts';
-import Carrusel from './components/Carrusel'
-import Header from './components/Header';
-import Products from './Products';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import AdminProducts from "./AdminProducts";
+import Carrusel from "./components/Carrusel";
 import Cart from './Cart'
-
+import Table from "./components/Table";
+import Header from "./components/Header";
+import Search from "./components/Search";
+import Products from "./Products";
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Switch>
-          <Route path = '/' exact>
-            <Header/>
-            <Carrusel/>
+          <Route path="/" exact>
+            <Header />
+            <Search />
+            <Carrusel />
+            <Table />
           </Route>
-          {/* <Route path = '/home'>
-            <Login />
+          <Route path="/products">
+            <Header />
+            <br></br>
+            <Products />
+
           </Route>
-          <Route path = '/promotion'>
-            <h1>Hola soy para las ordenes</h1>
-          </Route> */}
-          <Route path = '/categories'>
+           <Route path = '/categories'>
             <h1>aqui va el listado de categorias</h1>
             <Cart/>
           </Route>
           <Route path = '/products'>
-          <p>aquí veo todos los productos si soy cliente</p>
-          <Products/>
-          </Route>
-          <Route path = '/admin'>
-            <Header/>
-            <p>aquí agrego productos si soy administrador</p>
-            <AdminProducts/>
+
+
+            <h1>Hola soy el administrador</h1>
+          </Route> */}
+          <Route path="/admin">
+            <Header />
+            <h1>Hola soy el administrador</h1>
+            <p>aquí agrego productos</p>
+            <AdminProducts />
+
           </Route>
         </Switch>
       </div>

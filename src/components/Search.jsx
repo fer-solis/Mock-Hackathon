@@ -1,9 +1,14 @@
-import React from 'react';
+import React from "react";
 
-function Search () {
-    return (
-    <div><h1>Buscar</h1>
-    <i class="material-icons">zoom_in</i></div>);
-  }
+const Search = () => {
+  return (
+    <form>
+      <label>
+        <input type="text" name="name" />
+        <i class="material-icons">zoom_in</i>
+      </label>
+    </form>
+  );
+};
 
-  export default Search;
+export default Search;

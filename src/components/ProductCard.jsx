@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 import {db} from '../firebase'
-
+import "./ProductCard.css";
 
 
 export default function ProductCard ({ product, productList, cart, setCart}) {
@@ -24,22 +24,22 @@ export default function ProductCard ({ product, productList, cart, setCart}) {
 
 
   return (
-    <div>
+    <div className="table">
       {product && (
       <Fragment>
         {productList ? (
-          <div id='crudProduct-content'>
+      <div id='card'>
             <img src={product.image} id='product-photos'></img>
-            <p id= 'id'>{product.id}</p>
-            <p id= 'color'>{product.color}</p>
-            <p id= 'description'>{product.description}</p>
-            <p id= 'price'>{product.price}</p>
-            <p id= 'type'>{product.type}</p>
-            <p id= 'category'>{product.category}</p>
-            <button className='btn-primary' onClick={()=> addToCart(product.id)}>
-            Agregar al carrito
-            </button>
-            </div>
+                <div id="textBox">
+                <p id= 'styleId'>{product.id}</p>
+                <p id="styleProductName">{product.name}</p>
+                <p id="stylePriceName">{product.price}</p>
+                <p className="styleIdChar"> Color: {product.color}</p>
+                <p className="styleIdChar">Detalles: {product.description}</p>
+                <p className="styleIdChar">Depto: {product.category}</p>
+                <br></br>
+                <button className='btn-primary' onClick={()=> addToCart(product.id)}>Agregar al carrito</button>
+                <br></br>
         ):(
           <div id='cart-count'>
           <div id='name'>{product.name}</div>
@@ -52,4 +52,3 @@ export default function ProductCard ({ product, productList, cart, setCart}) {
     )}
       </div>
   )}
-

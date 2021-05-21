@@ -1,0 +1,16 @@
+#logoHeader {
+  width: 11rem;
+  margin: 0rem 10rem 0rem 0rem;
+}
+#avatarUser {
+  width: 2rem;
+}
+#shoppingCart {
+  width: 2rem;
+  padding: 0rem 0rem 0rem 2rem;
+  color: #2199ea;
+}
+#containerHeader {
+  padding: 0rem 0rem 0rem 4rem;
+  margin: -3rem 0rem 0rem 11rem;
+}
