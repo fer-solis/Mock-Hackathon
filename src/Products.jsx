@@ -24,7 +24,7 @@ export default function Products( props ) {
     });
     setproductList(list)
   }
-    
+
 
   const getProductsMan = async () => {
     let obj;
@@ -53,15 +53,15 @@ export default function Products( props ) {
 
 
   return (
-    
+
     <div>
       <div className= 'cabecera'>
-        <Cart cart={cart} setCart={setCart} product={productList}/>
+        {/* <Cart cart={cart} setCart={setCart} product={productList}/> */}
       </div>
       <button className="categoryButton" onClick={getProductsMan}>Hombre</button>
       <button className="categoryButton" onClick={getProductsWoman}>Mujer</button>
       <button className="categoryButton" onClick={getProducts}>Todo</button>
-      
+
       {productList &&
           productList.map((product) => (
             <ProductCard
@@ -81,10 +81,4 @@ export default function Products( props ) {
   )
 }
 
-            />
-          ))}
-
-    </div>
-  )
-}
 

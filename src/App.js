@@ -9,7 +9,7 @@ import Carrusel from "./components/Carrusel";
 import Cart from './Cart'
 import Table from "./components/Table";
 import Header from "./components/Header";
-import Search from "./components/Search";
+// import Search from "./components/Search";
 import Products from "./Products";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <Header />
-            <Search />
+            {/* <Search /> */}
             <Carrusel />
             <Table />
           </Route>
@@ -29,21 +29,12 @@ function App() {
             <Products />
 
           </Route>
-           <Route path = '/categories'>
-            <h1>aqui va el listado de categorias</h1>
+          <Route path = '/categories'>
             <Cart/>
           </Route>
-          <Route path = '/products'>
-
-
-            <h1>Hola soy el administrador</h1>
-          </Route> */}
           <Route path="/admin">
             <Header />
-            <h1>Hola soy el administrador</h1>
-            <p>aquí agrego productos</p>
             <AdminProducts />
-
           </Route>
         </Switch>
       </div>

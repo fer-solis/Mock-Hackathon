@@ -24,11 +24,11 @@ export default function ProductCard ({ product, productList, cart, setCart}) {
 
 
   return (
-    <div className="table">
-      {product && (
-      <Fragment>
-        {productList ? (
-      <div id='card'>
+    <div div className="table">
+    {product && (
+    <Fragment>
+      {productList ? (
+        <div id='card'>
             <img src={product.image} id='product-photos'></img>
                 <div id="textBox">
                 <p id= 'styleId'>{product.id}</p>
@@ -40,15 +40,18 @@ export default function ProductCard ({ product, productList, cart, setCart}) {
                 <br></br>
                 <button className='btn-primary' onClick={()=> addToCart(product.id)}>Agregar al carrito</button>
                 <br></br>
-        ):(
-          <div id='cart-count'>
-          <div id='name'>{product.name}</div>
-          <div id='price'>{product.qty} X ${product.price.toFixed(2)}</div>
-          <button onClick={() => addProduct(id)} className='add'>add</button>
-          <button onClick={() => removeProduct(id)} className='remove'>remove</button>
-          </div>
-        )}
-      </Fragment>
-    )}
-      </div>
+                </div>
+            </div>
+
+      ):(
+        <div id='cart-count'>
+        <div id='name'>{product.name}</div>
+        <div id='price'>{product.qty} X ${product.price.toFixed(2)}</div>
+        <button onClick={() => addProduct(id)} className='add'>add</button>
+        <button onClick={() => removeProduct(id)} className='remove'>remove</button>
+        </div>
+      )}
+    </Fragment>
   )}
+    </div>
+)}
