@@ -7,6 +7,7 @@ import AdminProducts from "./AdminProducts";
 import Carrusel from "./components/Carrusel";
 import Header from "./components/Header";
 import Search from "./components/Search";
+import Products from "./Products"
 
 function App() {
   return (
@@ -17,6 +18,11 @@ function App() {
             <Header />
             <Search />
             <Carrusel />
+          </Route>
+          <Route path ='/products'>
+          <Header />
+          <br></br>
+          <Products/>
           </Route>
           {/* <Route path = '/home'>
             <Login />

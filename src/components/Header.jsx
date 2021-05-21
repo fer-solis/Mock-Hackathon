@@ -2,7 +2,6 @@ import React from 'react'
 import './Header.css'
 import totalLookLogo from '../assets/totalLookLogo.png';
 import avatarUser from '../assets/avatarUser.png'
-import shoppingCart from '../assets/shoppingCart.png'
 import {useHistory} from 'react-router-dom'
 
 const Header = () => {
