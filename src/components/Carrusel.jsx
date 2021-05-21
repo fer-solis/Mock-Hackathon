@@ -1,4 +1,5 @@
 import React from "react";
+import "./Carrusel.css";
 import { useHistory } from "react-router-dom";
 import banner1 from "../assets/banner1.png";
 import banner2 from "../assets/banner2.png";
