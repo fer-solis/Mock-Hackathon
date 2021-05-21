@@ -13,8 +13,8 @@ code {
 }
 
 #logoHeader{
-  width: 10rem;
-  padding: .5rem;
+  width: 11rem;
+  margin: 0rem 10rem 0rem 0rem;
   
 }
 
@@ -70,16 +70,16 @@ ul.slider li img{
 }
 
 ul.slider li:first-child {
-    opacity: 1; /*Mostramos el primer <li>*/
+    opacity: 1; 
 }
 
 ul.slider li:target {
-    opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
+    opacity: 1; 
 }
 
 .menu{
   text-align: center;
-  margin: 20px;
+  margin: 5px;
 }
 
 .menu li{
