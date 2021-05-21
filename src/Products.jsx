@@ -28,7 +28,7 @@ export default function Products( props ) {
   return (
     <div>
       <div className= 'cabecera'>
-        <Cart cart={cart} setCart={setCart}/>
+        <Cart cart={cart} setCart={setCart} product={productList}/>
       </div>
       {productList &&
           productList.map((product) => (

@@ -44,8 +44,8 @@ export default function ProductCard ({ product, productList, cart, setCart}) {
           <div id='cart-count'>
           <div id='name'>{product.name}</div>
           <div id='price'>{product.qty} X ${product.price.toFixed(2)}</div>
-          <button onClick={() => addProduct(_id)} className='add'>add</button>
-          <button onClick={() => removeProduct(_id)} className='remove'>remove</button>
+          <button onClick={() => addProduct(id)} className='add'>add</button>
+          <button onClick={() => removeProduct(id)} className='remove'>remove</button>
           </div>
         )}
       </Fragment>
