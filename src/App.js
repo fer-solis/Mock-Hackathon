@@ -1,43 +1,44 @@
 import './App.css';
 import  {db} from './firebase';
-import React, {useState, useEffect} from 'react'
 
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
+
+import AdminProducts from './AdminProducts';
 
 
 function App() {
-
-//   const [getProducts, setGetProducts] = useState([]);
-
-//   useEffect(() => {
-//     const getProducts = () =>{
-//     const { docs } =  db.collection('Productos').doc('VESTIDOS').get();
-//     const nuevoArray = docs.map(item =>({name: item.Nombre, ...item.data() }))
-//     setGetProducts(nuevoArray)
-//     console.log(nuevoArray); //renderiza las notas desps de tomar la info
-//   }
-//   getProducts(); //trae los datos desde firebase y ademas los renderiza y tmbn los ids pa usar dsps.
-// },[])
-
-// REFERENCIA A LA BASE DE DATOS
-  const productColection = db.collection('Productos').doc('VESTIDOS');
-
-  // TREAMOS LA DATA DE LA REFERENCIA A LA CONSOLA
-  productColection.get().then((doc) => {
-      if (doc.exists) {
-          console.log("Document data:", doc.data());
-      } else {
-          // doc.data() will be undefined in this case
-          console.log("No such document!");
-      }
-  }).catch((error) => {
-      console.log("Error getting document:", error);
-  });
-
-
   return (
-    <div className="App">
-      <h1 key={doc.data('Nombre')}></h1>
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path = '/' exact>
+            <h1>Hola soy el home</h1>
+          </Route>
+          {/* <Route path = '/home'>
+            <Login />
+          </Route>
+          <Route path = '/promotion'>
+            <h1>Hola soy para las ordenes</h1>
+          </Route>
+          <Route path = '/categories'>
+            <h1>Hola soy el jefe de cocina</h1>
+          </Route>
+          <Route path = '/products'>
+            <h1>Hola soy el administrador</h1>
+          </Route> */}
+          <Route path = '/admin'>
+            <h1>Hola soy el administrador</h1>
+            <p>aquí agrego productos</p>
+            <AdminProducts/>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

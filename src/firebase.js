@@ -15,7 +15,6 @@
   const fb = firebase.initializeApp(firebaseConfig);
   // firebase.analytics();
 
-
 export const db = fb.firestore();
 // console.log(db);
 
