@@ -10,7 +10,7 @@ const Header = () => {
     const history = useHistory()
 
     const goHome = () =>{
-        history.push('/home')
+        history.push('/')
     }
    
 
@@ -20,7 +20,7 @@ const Header = () => {
             <img id="logoHeader" src={totalLookLogo} onClick={goHome}></img>
             <div id="containerHeader">
                 <img id="avatarUser" src={avatarUser}></img>
-                <img id="shoppingCart" src={shoppingCart}></img>
+                <i id="shoppingCart" className="material-icons">add_shopping_cart</i>
             </div>
         </div>
         

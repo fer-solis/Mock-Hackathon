@@ -19,21 +19,24 @@ export default function CrudProduct({ product }) {
     <div>
       {product && (
         <Fragment>
-          <div id="crudProduct-content">
+          <div className="table">
+            <div id="card">
             <img src={product.image} id="product-photos"></img>
             <p id="styleId">{product.id}</p>
             <p id="styleProductName">{product.name}</p>
-            <p className="styleIdChar">{product.color}</p>
-            <p className="styleIdChar">{product.description}</p>
             <p id="stylePriceName">{product.price}</p>
-            <p className="styleIdChar">{product.type}</p>
-            <p className="styleIdChar">{product.category}</p>
+            <p className="styleIdChar"> Color: {product.color}</p>
+            <p className="styleIdChar">Detalles: {product.description}</p>
+            <p className="styleIdChar">Depto: {product.type}</p>
+            <p className="styleIdChar">Producto: {product.category}</p>
+            <br></br>
             <button
               className="btn-primary"
               onClick={() => deleteProduct(product.id)}
             >
               Eliminar
             </button>
+            </div>
           </div>
         </Fragment>
       )}
