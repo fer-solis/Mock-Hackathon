@@ -31,6 +31,8 @@ export default function AdminProducts(props) {
     });
   };
 
+
+
   const addProduct = async () => {
     const obj = { name, description, color, price, category, type, image };
     await db.collection("products").add(obj);
