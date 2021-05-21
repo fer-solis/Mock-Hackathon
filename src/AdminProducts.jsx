@@ -100,19 +100,23 @@ export default function AdminProducts() {
       <button className="btn-primary" onClick={addProduct}>
         Agregar Producto
       </button>
-
+      
       <table className="table">
         {productList.map((product, index) => (
           <tr key={index}>
-            <p>{index + 1}</p>
-            <p>{product.id}</p>
-            <p>{product.name}</p>
-            <p>{product.color}</p>
-            <p>{product.description}</p>
-            <p>{product.price}</p>
-            <p>{product.type}</p>
-            <p>{product.category}</p>
-            <img src={product.image} id="product-photos"></img>
+            <div id="card">
+              <img src={product.image} id="product-photos"></img>
+              <p>{index + 1}</p>
+              <p id="styleId">{product.id}</p>
+              <p id="styleProductName">{product.name}</p>
+              <p id="stylePriceName">{product.price}</p>
+              <p id="styleIdChar">Color: {product.color}</p>
+              <p id="styleIdChar">Descripción: {product.description}</p>
+              <p id="styleIdChar">Depto: {product.type}</p>
+              <p id="styleIdChar">{product.category}</p>
+              <br></br>
+              </div>
+              <br></br>
           </tr>
         ))}
       </table>

@@ -38,8 +38,7 @@ function App() {
           </Route> */}
           <Route path = '/admin'>
             <Header/>
-            <h1>Hola soy el administrador</h1>
-            <p>aquí agrego productos</p>
+            <h2>Agregar productos</h2>
             <AdminProducts/>
           </Route>
         </Switch>

@@ -9,7 +9,7 @@ const Header = () => {
     const history = useHistory()
 
     const goHome = () =>{
-        history.push('/home')
+        history.push('/')
     }
    
 
