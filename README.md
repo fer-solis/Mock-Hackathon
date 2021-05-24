@@ -23,6 +23,7 @@ Some of the screens/figures may include generic information but at the end such 
 * [4. List of products page](#4-list-of-products-page)
 * [5. Analytics page](#5-analytics-page)
 * [6. Stack of Technologies](#6-stack-of-technologies)
+* [7. Delivery](#7-delivery)
 ------------
 ## 1. System Home Page
 
@@ -103,3 +104,8 @@ The only required browser to make the project work is Chrome.
 Use github for your code repository.
 
 It's acceptable to present your system running locally however if you are in good shape to deploy then talk to your mentor to check the available infrastructure for deployment.
+
+------------
+## 7. Delivery
+Open link, then right click on inspect and view mode iphone 6/7/8 Plus for correct visualization
+https://boring-beaver-a3028c.netlify.app/
